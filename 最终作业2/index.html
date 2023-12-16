@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>商品推荐网站</title>
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/Serendipity.css" />
+		<link rel="stylesheet" href="css/gc.css" />
+		<link rel="stylesheet" href="css/news.css" />
+	</head>
+	<body>
+
+		<div class="navbar">
+			<h1>LOGO</h1>
+			<nav>
+				<a href="#">首页</a>
+				<a href="#_Serendipity">商品</a>
+				<a href="#_banner">推荐</a>
+				<a href="#_news">新闻</a>
+				<a href="#">关于我们</a>
+			</nav>
+			<!-- 放置搜索按钮 -->
+			<button class="search-button">搜索</button>
+		</div>
+
+		<!-- banner轮播图 -->
+		<div class="slider-container">
+			<div class="slider">
+				<div class="slide"><img class="banner" src="img/2.jpg" alt="Banner 1"></div>
+				<div class="slide"><img class="banner" src="img/3.jpg" alt="Banner 2"></div>
+				<div class="slide"><img class="banner" src="img/1.jpeg" Banner 3"></div>
+			</div>
+			<button class="prev" onclick="prevSlide()">❮</button>
+			<button class="next" onclick="nextSlide()">❯</button>
+		</div>
+
+		<!-- 轮播图的js -->
+		<script src="js/banner.js"></script>
+		
+		<div id="_Serendipity"></div>
+		<!-- 推荐内容 -->
+		<div class="Serendipity-container">
+		  <div class="Serendipity-main-title">商品推荐</div>
+		
+		  <div class="Serendipity-box-container">
+		    <div class="Serendipity-box" style="background-image: url('img/1.jpeg');">
+		      <div class="Serendipity-content">
+		        <h2>标题1</h2>
+		        <h2>标题2</h2>
+		        <p>介绍内容1</p>
+		      </div>
+		    </div>
+		
+		    <div class="Serendipity-box" style="background-image: url('img/2.jpg');">
+		      <div class="Serendipity-content">
+		        <h2>标题3</h2>
+		        <h2>标题4</h2>
+		        <p>介绍内容2</p>
+		      </div>
+		    </div>
+		
+		    <div class="Serendipity-box" style="background-image: url('img/3.jpg');">
+		      <div class="Serendipity-content">
+		        <h2>标题5</h2>
+		        <h2>标题6</h2>
+		        <p>介绍内容3</p>
+		      </div>
+		    </div>
+		
+		    <div class="Serendipity-box" style="background-image: url('img/4.jpg');">
+		      <div class="Serendipity-content">
+		        <h2>标题7</h2>
+		        <h2>标题8</h2>
+		        <p>介绍内容4</p>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		
+		<div id="_banner"></div>
+		<!-- 一个推荐banner -->
+		<div class="gc-banner">
+		    <h1>标题</h1>
+		    <p>这里是一些文字描述</p>
+		</div>
+
+	
+		<div id="_news"></div>
+		<!-- 新闻推荐 -->
+		<div class="news-main-box">
+		  <div class="news-title">新闻推荐</div>
+		
+		  <div class="news-sub-box">
+		    <div class="news-box">
+		      <img src="img/3.jpg" alt="Image 1">
+		      <div class="news-box-title">标题1</div>
+		      <div class="news-box-subtitle">副标题1</div>
+		      <div class="news-box-description">描述内容1</div>
+		    </div>
+		
+		    <div class="news-box">
+		      <img src="img/2.jpg" alt="Image 2">
+		      <div class="news-box-title">标题2</div>
+		      <div class="news-box-subtitle">副标题2</div>
+		      <div class="news-box-description">描述内容2</div>
+		    </div>
+		
+		    <!-- Add more boxes as needed -->
+		  </div>
+		</div>
+
+		<!-- footer -->
+		<footer>
+			<p>&copy; 2023 Your Company Name. All rights reserved.</p>
+		</footer>
+	</body>
+</html>

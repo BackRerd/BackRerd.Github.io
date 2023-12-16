@@ -1,0 +1,73 @@
+.Serendipity-container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      /* border: 1px solid #ccc; */
+    }
+
+    .Serendipity-main-title {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 30px;
+	  text-align: center;
+    }
+
+    .Serendipity-box-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .Serendipity-box {
+      width: 48%;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      position: relative;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      height: 200px; /* 设置一个明确的高度值 */
+      transition: transform 0.3s, filter 0.3s;
+    }
+
+    .Serendipity-box:hover {
+      transform: scale(1.1);
+      filter: brightness(70%);
+    }
+
+    .Serendipity-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* 确保图片在盒子内完全填充并保持纵横比 */
+      display: block;
+    }
+
+    .Serendipity-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff; /* 文字颜色设为白色，以便在图片上更清晰可见 */
+    }
+
+    .Serendipity-content h2 {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .Serendipity-content p {
+      font-size: 14px;
+    }
+
+    /* For smaller screens, adjust box width to 100% */
+    @media (max-width: 600px) {
+      .Serendipity-box {
+        width: 100%;
+      }
+    }

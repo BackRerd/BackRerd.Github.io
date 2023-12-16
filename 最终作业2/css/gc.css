@@ -1,0 +1,27 @@
+.gc-banner {
+	position: relative;
+	background-image: url('../img/4.jpg');
+	/* 替换 'your-image.jpg' 为实际的图片路径 */
+	background-size: cover;
+	height: 300px;
+	/* 根据需要设置高度 */
+	color: #fff;
+	/* 根据需要设置文字颜色 */
+	/* text-align: left; */
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	justify-content: center;
+}
+
+.gc-banner h1 {
+	margin-left: 300px;
+	font-size: 2em;
+	/* 根据需要设置标题字体大小 */
+}
+
+.gc-banner p {
+	margin-left: 300px;
+	font-size: 1.2em;
+	/* 根据需要设置文字字体大小 */
+}

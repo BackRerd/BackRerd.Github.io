@@ -1,0 +1,106 @@
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+}
+
+.navbar {
+	height: 78px;
+	background-color: #333;
+	/* 设置导航栏背景颜色 */
+	color: #fff;
+	/* 设置文本颜色为白色 */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+	/* 设置左右内边距 */
+}
+
+.navbar h1 {
+	margin: 0;
+}
+
+.navbar nav {
+	display: flex;
+}
+
+.navbar a {
+	color: #fff;
+	/* 设置链接文本颜色为白色 */
+	text-decoration: none;
+	/* 去除链接下划线 */
+	margin: 0 15px;
+	/* 设置链接之间的间距 */
+	font-weight: bold;
+	/* 设置链接文本为粗体 */
+	transition: color 0.3s;
+	/* 添加过渡效果 */
+}
+
+.navbar a:hover {
+	color: #4CAF50;
+	/* 设置悬浮时的文本颜色 */
+}
+
+.navbar a:active {
+	color: #FF5733;
+	/* 设置点击时的文本颜色 */
+}
+
+.slider-container {
+	position: relative;
+	width: 100%;
+	max-width: 1920px;
+	/* 设置轮播图容器的最大宽度 */
+	margin: auto;
+	/* 居中显示 */
+	overflow: hidden;
+}
+
+.slider {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+	min-width: 100%;
+	box-sizing: border-box;
+}
+
+.banner {
+	width: 100%;
+	max-height: 300px;
+	/* 设置图片最大高度 */
+	height: auto;
+	object-fit: cover;
+	/* 保持图片比例，覆盖整个区域 */
+}
+
+.prev,
+.next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 24px;
+	cursor: pointer;
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	border: none;
+	outline: none;
+}
+
+.prev {
+	left: 10px;
+}
+
+.next {
+	right: 10px;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}

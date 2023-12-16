@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/block.css" />
+	<link rel="stylesheet" href="../css/main.css" />
+	<link rel="stylesheet" href="../css/ThreeBlock.css" />
+	<link rel="stylesheet" href="../css/InFoBox.css" />
+    <title>关于我</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        #about-me-container, #team-section {
+            background-color: #ffffff;
+            max-width: 800px;
+            margin: 10px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        #profile-picture {
+            border-radius: 50%;
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        h1, h2 {
+            color: #333333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555555;
+            line-height: 1.6;
+        }
+
+        .team-member {
+            margin: 20px auto;
+            display: flex;
+            align-items: center; 
+            text-align: left;
+            max-width: 600px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			border-radius: 10px;
+        }
+
+        .team-member img {
+            border-radius: 30px;
+            max-width: 100px;
+            margin-right: 20px;
+        }
+
+        .team-member-content {
+            flex-grow: 1; 
+        }
+    </style>
+</head>
+<body>
+    <div id="about-me-container">
+        <img id="profile-picture" src="../img/Head.jpg" alt="Profile Picture">
+        <div>
+            <h1>作者名称</h1>
+            <p>关于作者的简介。</p>
+        </div>
+    </div>
+
+    <div id="team-section">
+        <h2>小组成员</h2>
+        <div class="team-member">
+            <img src="../img/4.jpg" alt="Team Member 1">
+            <div class="team-member-content">
+                <h3>成员1</h3>
+                <p>成员的信息</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="../img/3.jpg" alt="Team Member 2">
+            <div class="team-member-content">
+                <h3>成员2</h3>
+                <p>成员的信息</p>
+            </div>
+        </div>
+    </div>
+	
+	<nav>
+	    <a href="../index.html">主页</a>
+	    <a href="../index.html">文章</a>
+	    <a href="../page/imgList.html">相册集</a>
+	    <a href="#">关于我</a>
+	</nav>
+	
+	
+	
+	<div class="footer">
+	    <p>&copy; 2023 Your Website Name. All rights reserved.</p>
+	</div>
+</body>
+</html>

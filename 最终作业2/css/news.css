@@ -1,0 +1,53 @@
+.news-main-box {
+	width: 80%;
+	margin: 50px auto;
+	text-align: center;
+}
+
+.news-title {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.news-sub-box {
+	display: flex;
+	justify-content: center;
+	/* 修改这里 */
+}
+
+.news-box {
+	width: 200px;
+	padding: 10px;
+	margin: 20px;
+	/* 取消这里的间距 */
+	border: 1px solid #ccc;
+	transition: transform 0.3s ease-in-out;
+}
+
+.news-box:hover {
+	transform: scale(1.1);
+}
+
+.news-box img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+}
+
+.news-box-title {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 10px 0;
+}
+
+.news-box-subtitle {
+	font-size: 14px;
+	color: #555;
+	margin: 5px 0;
+}
+
+.news-box-description {
+	font-size: 14px;
+	color: #777;
+}
