@@ -1,0 +1,118 @@
+ body {
+ 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 	margin: 0;
+ 	padding: 0;
+ 	background-color: #262626;
+ 	/* 深灰色背景 */
+ 	color: #ccc;
+ 	/* 浅灰色文字 */
+ }
+
+ header {
+ 	text-align: center;
+ 	background-color: #212121;
+ 	color: #fff;
+ 	padding: 20px;
+ }
+
+ nav {
+ 	background-color: rgba(0, 0, 0, 0.5);
+ 	border-radius: 10px;
+ 	overflow: hidden;
+ 	margin: 20px;
+ 	position: fixed;
+ 	top: 0;
+ 	left: 0;
+ 	right: 0;
+ }
+
+ nav a {
+ 	display: inline-block;
+ 	color: #fff;
+ 	text-align: center;
+ 	padding: 14px 16px;
+ 	text-decoration: none;
+ }
+
+ nav a:hover {
+ 	background-color: #555;
+ }
+
+ nav a:last-child {
+ 	border-radius: 0 10px 10px 0;
+ }
+
+ section {
+ 	max-width: 800px;
+ 	margin: 20px auto 20px;
+ 	background-color: #333;
+ 	padding: 20px;
+ 	border-radius: 8px;
+ 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+
+ h1,
+ h2 {
+ 	color: #fff;
+ }
+
+ h2 {
+ 	border-bottom: 2px solid #fff;
+ 	padding-bottom: 5px;
+ }
+
+ p {
+ 	line-height: 1.6;
+ 	color: #ccc;
+ }
+
+ ul {
+ 	list-style-type: none;
+ 	padding: 0;
+ }
+
+ ul li {
+ 	margin-bottom: 8px;
+ }
+
+ .contact {
+ 	margin-top: 20px;
+ }
+
+ .skills {
+ 	margin-top: 20px;
+ }
+
+ .skill-item {
+ 	margin-bottom: 10px;
+ }
+
+ .skill-label {
+ 	display: block;
+ 	margin-bottom: 5px;
+ 	color: #fff;
+ }
+
+ .progress {
+ 	height: 20px;
+ 	background-color: #555;
+ 	border-radius: 5px;
+ 	overflow: hidden;
+ }
+
+ .progress-bar {
+ 	height: 100%;
+ 	background-color: #FFA500;
+ 	border-radius: 5px;
+ 	text-align: center;
+ 	line-height: 20px;
+ 	color: #fff;
+ }
+
+ footer {
+ 	text-align: center;
+ 	margin-top: 20px;
+ 	padding: 10px;
+ 	background-color: #212121;
+ 	color: #fff;
+ }
