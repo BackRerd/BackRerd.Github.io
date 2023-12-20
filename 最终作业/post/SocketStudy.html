@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .top-block {
+            background-image: url('img/SocketStudy.webp');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            color: #fff; 
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .top-block h1 {
+            margin-bottom: 10px;
+        	padding-top: 50px;
+        	color: #333;
+        }
+        
+        .top-block p {
+            font-style: italic;
+            margin-bottom: 10px;
+        	color: #333;
+        }
+        
+        .top-block .author {
+            font-weight: bold;
+        }
+        
+        .post-article-block{
+        	margin: 20px;
+        	border: 1px solid rebeccapurple;
+        	border-radius: 5px;
+        	box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        }
+        .post-article-block h2{
+        	margin-top: 20px;
+        }
+        body {
+        	font-family: Arial, sans-serif;
+        	margin: 0;
+        	padding: 0;
+        	background-color: #f4f4f4;
+        	/* overflow: hidden; */
+        	/* Remove this line */
+        }
+        nav {
+          background-color: rgba(154, 154, 154, 0.8); /* 半透明背景 */
+          color: #fff;
+          text-align: center;
+          padding: 10px 0;
+          position: fixed;
+          width: 100%;
+          top: 0;
+          z-index: 1000; /* 确保导航栏在顶层 */
+        }
+        
+        nav a {
+          color: #fff;
+          text-decoration: none;
+          margin: 0 15px;
+          font-size: 16px;
+          position: relative;
+        }
+        
+        nav a:hover {
+          color: blueviolet; /* 设置悬停时的颜色，可以根据需要修改 */
+        }
+        
+        nav a::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: transparent;
+          transform: scaleX(0);
+          transition: transform 0.3s ease;
+        }
+        
+        nav a:hover::before {
+          transform: scaleX(1);
+          background-color: #ffd700; /* 悬浮时的边框颜色 */
+        }
+        
+        pre{
+        	box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        	border-radius: 10px;
+        	background-color: #333;
+        }
+        pre code{
+        	color: #f4f4f4;
+        }
+        
+        .footer {
+        	background-color: #333;
+        	color: #fff;
+        	padding: 10px;
+        	text-align: center;
+        }
+    </style>
+    <title>Java 通信教程</title>
+</head>
+<body>
+    <div class="top-block">
+        <h1>Java 通信教程</h1>
+        <p>欢迎来到 Java 通信的基础教程。在这个教程中，我们将介绍 Java 中的网络通信、Socket 编程以及如何使用 RESTful API 进行通信。</p>
+        <p class="author">作者：JoBackRer</p>
+    </div>
+
+    <nav>
+        <a href="../index.html">首页</a>
+        <a href="#shar">项目</a>
+        <a href="#">相册集</a>
+        <a href="../page/about.html">关于我们</a>
+        <a href="#">友情链接</a>
+    </nav>
+
+    <div class="post-article-block">
+        <h2>Java 网络通信</h2>
+        <p>Java 提供了一系列用于网络通信的类和接口。使用这些类，您可以创建客户端和服务器应用程序，实现在网络上进行数据传输。</p>
+        <pre>
+            <code>
+// 服务器端
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.io.InputStream;
+
+public class Server {
+    public static void main(String[] args) throws Exception {
+        ServerSocket serverSocket = new ServerSocket(12345);
+        Socket socket = serverSocket.accept();
+
+        InputStream inputStream = socket.getInputStream();
+        byte[] data = new byte[1024];
+        int bytesRead = inputStream.read(data);
+        System.out.println("接收到客户端数据：" + new String(data, 0, bytesRead));
+    }
+}
+
+// 客户端
+import java.net.Socket;
+import java.io.OutputStream;
+
+public class Client {
+    public static void main(String[] args) throws Exception {
+        Socket socket = new Socket("localhost", 12345);
+
+        OutputStream outputStream = socket.getOutputStream();
+        String message = "Hello, Server!";
+        outputStream.write(message.getBytes());
+    }
+}
+            </code>
+        </pre>
+
+        <h2>Socket 编程</h2>
+        <p>Socket 是实现网络通信的基本构建块。通过使用 Socket，可以在客户端和服务器之间建立连接，进行数据传输。</p>
+        <pre>
+            <code>
+// 服务器端
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class Server {
+    public static void main(String[] args) throws Exception {
+        ServerSocket serverSocket = new ServerSocket(12345);
+        Socket socket = serverSocket.accept();
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        String message = reader.readLine();
+        System.out.println("接收到客户端数据：" + message);
+    }
+}
+
+// 客户端
+import java.net.Socket;
+import java.io.PrintWriter;
+
+public class Client {
+    public static void main(String[] args) throws Exception {
+        Socket socket = new Socket("localhost", 12345);
+
+        PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
+        String message = "Hello, Server!";
+        writer.println(message);
+    }
+}
+            </code>
+        </pre>
+
+        <h2>RESTful API 通信</h2>
+        <p>RESTful API 是一种通过 HTTP 进行通信的方式。Java 中可以使用 HttpURLConnection 或第三方库（如 Apache HttpClient）来进行 RESTful API 调用。</p>
+        <pre>
+            <code>
+// 使用 HttpURLConnection
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class RestClient {
+    public static void main(String[] args) throws Exception {
+        URL url = new URL("https://api.example.com/data");
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+        String line;
+        StringBuilder response = new StringBuilder();
+
+        while ((line = reader.readLine()) != null) {
+            response.append(line);
+        }
+
+        System.out.println("服务器响应：" + response.toString());
+    }
+}
+
+// 使用 Apache HttpClient
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.HttpClientBuilder;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class RestClient {
+    public static void main(String[] args) throws Exception {
+        String url = "https://api.example.com/data";
+        HttpClient client = HttpClientBuilder.create().build();
+        HttpGet request = new HttpGet(url);
+
+        HttpResponse response = client.execute(request);
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+        String line;
+        StringBuilder result = new StringBuilder();
+
+        while ((line = reader.readLine()) != null) {
+            result.append(line);
+        }
+
+        System.out.println("服务器响应：" + result.toString());
+    }
+}
+            </code>
+        </pre>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 Your Website Name. 保留所有权利。</p>
+    </div>
+</body>
+</html>
