@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .top-block {
+            background-image: url('img/PythonStudy.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            color: #fff; 
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .top-block h1 {
+            margin-bottom: 10px;
+        	padding-top: 50px;
+        	color: #333;
+        }
+        
+        .top-block p {
+            font-style: italic;
+            margin-bottom: 10px;
+        	color: #333;
+        }
+        
+        .top-block .author {
+            font-weight: bold;
+        }
+        
+        .post-article-block{
+        	margin: 20px;
+        	border: 1px solid rebeccapurple;
+        	border-radius: 5px;
+        	box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        }
+        .post-article-block h2{
+        	margin-top: 20px;
+        }
+        body {
+        	font-family: Arial, sans-serif;
+        	margin: 0;
+        	padding: 0;
+        	background-color: #f4f4f4;
+        	/* overflow: hidden; */
+        	/* Remove this line */
+        }
+        nav {
+          background-color: rgba(154, 154, 154, 0.8); /* 半透明背景 */
+          color: #fff;
+          text-align: center;
+          padding: 10px 0;
+          position: fixed;
+          width: 100%;
+          top: 0;
+          z-index: 1000; /* 确保导航栏在顶层 */
+        }
+        
+        nav a {
+          color: #fff;
+          text-decoration: none;
+          margin: 0 15px;
+          font-size: 16px;
+          position: relative;
+        }
+        
+        nav a:hover {
+          color: blueviolet; /* 设置悬停时的颜色，可以根据需要修改 */
+        }
+        
+        nav a::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: transparent;
+          transform: scaleX(0);
+          transition: transform 0.3s ease;
+        }
+        
+        nav a:hover::before {
+          transform: scaleX(1);
+          background-color: #ffd700; /* 悬浮时的边框颜色 */
+        }
+        
+        pre{
+        	box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        	border-radius: 10px;
+        	background-color: #333;
+        }
+        pre code{
+        	color: #f4f4f4;
+        }
+        
+        .footer {
+        	background-color: #333;
+        	color: #fff;
+        	padding: 10px;
+        	text-align: center;
+        }
+    </style>
+    <title>Python 基础教程</title>
+</head>
+<body>
+    <div class="top-block">
+        <h1>Python 基础教程</h1>
+        <p>欢迎来到 Python 编程语言的基础教程。在这个教程中，我们将介绍一些基本概念，帮助您入门。</p>
+        <p class="author">作者：JoBackRer</p>
+    </div>
+
+    <nav>
+        <a href="../index.html">首页</a>
+        <a href="#shar">项目</a>
+        <a href="#">相册集</a>
+        <a href="../page/about.html">关于我们</a>
+        <a href="#">友情链接</a>
+    </nav>
+
+    <div class="post-article-block">
+        <h2>Python 简介</h2>
+        <p>Python 是一种易学、强大且高级的编程语言。它以清晰简洁的语法和丰富的标准库而著称。</p>
+
+        <h2>安装 Python</h2>
+        <p>首先，确保您已经安装了 Python。您可以从官方网站（https://www.python.org/）下载并安装最新版本。</p>
+
+        <h2>你的第一个 Python 程序</h2>
+        <p>让我们编写一个简单的“Hello, World!”程序来入门：</p>
+        <pre>
+            <code>
+print("Hello, World!")
+            </code>
+        </pre>
+        <p>将此代码保存为名为 <code>hello_world.py</code> 的文件。然后在终端中运行：</p>
+        <pre>
+            <code>
+python hello_world.py
+            </code>
+        </pre>
+
+        <p>这将在控制台上显示“Hello, World!”。</p>
+
+        <h2>变量和数据类型</h2>
+        <p>在 Python 中，您可以使用变量存储数据，而无需显式声明变量的类型。常见的数据类型包括整数、浮点数和字符串。</p>
+        <pre>
+            <code>
+age = 25
+price = 19.99
+message = "Hello, Python!"
+            </code>
+        </pre>
+
+        <h2>控制流语句</h2>
+        <p>Python 支持条件语句（<code>if</code>、<code>else</code>）和循环语句（<code>for</code>、<code>while</code>）。以下是一个简单的例子：</p>
+        <pre>
+            <code>
+x = 10
+
+if x > 5:
+    print("x 大于 5")
+else:
+    print("x 不大于 5")
+            </code>
+        </pre>
+
+        <h2>函数</h2>
+        <p>在 Python 中，您可以定义函数来组织代码。以下是一个简单的例子：</p>
+        <pre>
+            <code>
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print("结果：", result)
+            </code>
+        </pre>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 Your Website Name. 保留所有权利。</p>
+    </div>
+</body>
+</html>

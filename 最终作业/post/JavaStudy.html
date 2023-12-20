@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .top-block {
+            background-image: url('img/java.gif');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            color: #fff; 
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .top-block h1 {
+            margin-bottom: 10px;
+        	padding-top: 50px;
+			color: #333;
+        }
+        
+        .top-block p {
+            font-style: italic;
+            margin-bottom: 10px;
+			color: #333;
+        }
+        
+        .top-block .author {
+            font-weight: bold;
+        }
+        
+        .post-article-block{
+        	margin: 20px;
+        	border: 1px solid rebeccapurple;
+        	border-radius: 5px;
+        	box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        }
+        .post-article-block h2{
+        	margin-top: 20px;
+        }
+        body {
+        	font-family: Arial, sans-serif;
+        	margin: 0;
+        	padding: 0;
+        	background-color: #f4f4f4;
+        	/* overflow: hidden; */
+        	/* Remove this line */
+        }
+        nav {
+          background-color: rgba(154, 154, 154, 0.8); /* 半透明背景 */
+          color: #fff;
+          text-align: center;
+          padding: 10px 0;
+          position: fixed;
+          width: 100%;
+          top: 0;
+          z-index: 1000; /* 确保导航栏在顶层 */
+        }
+        
+        nav a {
+          color: #fff;
+          text-decoration: none;
+          margin: 0 15px;
+          font-size: 16px;
+          position: relative;
+        }
+        
+        nav a:hover {
+          color: blueviolet; /* 设置悬停时的颜色，可以根据需要修改 */
+        }
+        
+        nav a::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: transparent;
+          transform: scaleX(0);
+          transition: transform 0.3s ease;
+        }
+        
+        nav a:hover::before {
+          transform: scaleX(1);
+          background-color: #ffd700; /* 悬浮时的边框颜色 */
+        }
+        
+		pre{
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+			border-radius: 10px;
+			background-color: #333;
+		}
+		pre code{
+			color: #f4f4f4;
+		}
+        
+        .footer {
+        	background-color: #333;
+        	color: #fff;
+        	padding: 10px;
+        	text-align: center;
+        }
+		
+    </style>
+    <title>Java 基础教程</title>
+</head>
+<body>
+    <div class="top-block">
+        <h1>Java 基础教程</h1>
+        <p>欢迎来到 Java 编程语言的基础教程。在这个教程中，我们将涵盖一些基础概念，帮助您入门。</p>
+        <p class="author">作者：JoBackRer</p>
+    </div>
+
+    <nav>
+        <a href="../index.html">首页</a>
+        <a href="#shar">项目</a>
+        <a href="#">相册集</a>
+        <a href="../page/about.html">关于我们</a>
+        <a href="#">友情链接</a>
+    </nav>
+
+    <div class="post-article-block">
+        <h2>Java 简介</h2>
+        <p>Java 是一种功能强大且广泛使用的编程语言。它以其可移植性、安全性和面向对象的特性而闻名。</p>
+
+        <h2>设置 Java 开发环境</h2>
+        <p>要开始使用 Java 编码，您需要设置开发环境。请从官方 Oracle 网站下载并安装最新的 Java 开发工具包（JDK）。</p>
+
+        <h2>你的第一个 Java 程序</h2>
+        <p>让我们编写一个简单的“Hello, World!”程序来入门：</p>
+        <pre>
+            <code>
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+            </code>
+        </pre>
+        <p>将此代码保存为名为 <code>HelloWorld.java</code> 的文件。打开终端，导航到文件所在目录，使用以下命令进行编译和运行：</p>
+        <pre>
+            <code>
+javac HelloWorld.java
+java HelloWorld
+            </code>
+        </pre>
+
+        <p>这将在控制台上显示“Hello, World!”。</p>
+
+        <h2>变量和数据类型</h2>
+        <p>在 Java 中，您使用变量来存储数据。数据类型指定变量可以保存的值的类型。常见的数据类型包括整数的 <code>int</code>，浮点数的 <code>double</code> 和文本的 <code>String</code>。</p>
+        <pre>
+            <code>
+int age = 25;
+double price = 19.99;
+String message = "Hello, Java!";
+            </code>
+        </pre>
+
+        <h2>控制流语句</h2>
+        <p>Java 支持各种控制流语句，如 <code>if</code>、<code>else</code>、<code>for</code> 和 <code>while</code>。这些语句有助于控制程序的流程。</p>
+        <pre>
+            <code>
+int x = 10;
+
+if (x > 5) {
+    System.out.println("x 大于 5");
+} else {
+    System.out.println("x 不大于 5");
+}
+            </code>
+        </pre>
+
+        <h2>函数和方法</h2>
+        <p>在 Java 中，您可以定义函数或方法来组织代码。方法是执行特定任务的代码块，可以从程序的其他部分调用。</p>
+        <pre>
+            <code>
+public class Calculator {
+    public static int add(int a, int b) {
+        return a + b;
+    }
+}
+            </code>
+        </pre>
+        <p>调用该方法：</p>
+        <pre>
+            <code>
+int result = Calculator.add(5, 3);
+System.out.println("结果：" + result);
+            </code>
+        </pre>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 Your Website Name. 保留所有权利。</p>
+    </div>
+</body>
+</html>

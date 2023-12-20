@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .top-block {
+            background-image: url('img/TwoZhan.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            color: #fff; /* Set text color to be visible on the background */
+            text-align: center;
+            padding: 20px;
+        }
+
+        .top-block h1 {
+            margin-bottom: 10px;
+			padding-top: 50px;
+        }
+
+        .top-block p {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .top-block .author {
+            font-weight: bold;
+        }
+		
+		.post-article-block{
+			margin: 20px;
+			/* border: 1px solid rebeccapurple; */
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+		}
+		.post-article-block h2{
+			margin-top: 20px;
+		}
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f4f4f4;
+			/* overflow: hidden; */
+			/* Remove this line */
+		}
+		nav {
+		  background-color: rgba(154, 154, 154, 0.8); /* 半透明背景 */
+		  color: #fff;
+		  text-align: center;
+		  padding: 10px 0;
+		  position: fixed;
+		  width: 100%;
+		  top: 0;
+		  z-index: 1000; /* 确保导航栏在顶层 */
+		}
+		
+		nav a {
+		  color: #fff;
+		  text-decoration: none;
+		  margin: 0 15px;
+		  font-size: 16px;
+		  position: relative;
+		}
+		
+		nav a:hover {
+		  color: blueviolet; /* 设置悬停时的颜色，可以根据需要修改 */
+		}
+		
+		nav a::before {
+		  content: "";
+		  position: absolute;
+		  bottom: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 2px;
+		  background-color: transparent;
+		  transform: scaleX(0);
+		  transition: transform 0.3s ease;
+		}
+		
+		nav a:hover::before {
+		  transform: scaleX(1);
+		  background-color: #ffd700; /* 悬浮时的边框颜色 */
+		}
+		
+		
+		.footer {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+    </style>
+    <title>Title</title>
+</head>
+<body>
+    <div class="top-block">
+        <h1>二战</h1>
+        <p>二战（1939年-1945年）是20世纪最具影响力的全球性战争之一</p>
+        <p class="author">作者：来源于网络</p>
+    </div>
+
+    <nav>
+        <a href="../index.html">主页</a>
+        <a href="#shar">项目</a>
+        <a href="#">相册集</a>
+        <a href="../page/about.html">我们</a>
+		<a href="#">友链</a>
+    </nav>
+
+    <div class="post-article-block">
+        <h2>二战简介</h2>
+        <p>二战（1939年-1945年）是20世纪最具影响力的全球性战争之一，涉及到世界上大多数国家，分为两个战场：欧洲战场和太平洋战场。</p>
+    
+        <figure>
+            <!-- <img src="img/ouzhou.webp" alt="二战欧洲战场" /> -->
+			<img src="img/0.jpg" alt="" width="500px" />
+            <figcaption>德国入侵波兰，引发了战争的全面爆发（1939年）</figcaption>
+        </figure>
+    
+        <p>在欧洲战场上，纳粹德国的侵略行为导致战争爆发。1939年，德国入侵波兰，引发了战争的全面爆发。随后，德国侵占了许多欧洲国家，包括法国、荷兰和比利时。</p>
+    
+        <figure>
+            <img src="img/zhenzhu.jpeg" alt="珍珠港事件" width="500px" />
+            <figcaption>珍珠港事件标志着美国正式加入战争（1941年）</figcaption>
+        </figure>
+    
+        <p>在太平洋战场上，日本的侵略活动导致了与美国的冲突。珍珠港事件标志着美国正式加入战争。太平洋战场的战争主要在亚太地区进行，包括菲律宾、太平洋岛屿和中国。</p>
+    
+        <figure>
+            <img src="img/over.jpeg" alt="战争结束" width="500px" />
+            <figcaption>1945年，盟军获胜，纳粹德国和日本分别投降</figcaption>
+        </figure>
+    
+        <p>二战造成了巨大的破坏和人员伤亡，成为历史上规模最大的冲突之一。最终，盟军在1945年获胜，纳粹德国和日本分别投降，战争结束。</p>
+    
+        <p>二战对世界产生了深远的影响，塑造了后来的国际格局，并对人类社会产生了重大影响。战争的教训促使国际社会致力于建立和平与合作的体制，以防止类似的灾难再次发生。</p>
+    </div>
+
+
+    <div class="footer">
+        <!-- Footer Content -->
+        <p>&copy; 2023 我的博客网. All rights reserved.</p>
+    </div>
+</body>
+</html>
